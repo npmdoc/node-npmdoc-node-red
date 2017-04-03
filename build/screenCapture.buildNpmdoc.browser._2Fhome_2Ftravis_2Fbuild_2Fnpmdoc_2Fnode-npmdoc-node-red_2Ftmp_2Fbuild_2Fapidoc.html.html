@@ -1,0 +1,3322 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://nodered.org">node-red (v0.16.2)</a>
+</h1>
+<h4>A visual tool for wiring the Internet of Things</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red">module node-red</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.httpAdmin">
+            function <span class="apidocSignatureSpan">node-red.</span>httpAdmin
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.httpNode">
+            function <span class="apidocSignatureSpan">node-red.</span>httpNode
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.init">
+            function <span class="apidocSignatureSpan">node-red.</span>init
+            <span class="apidocSignatureSpan">(httpServer, userSettings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.start">
+            function <span class="apidocSignatureSpan">node-red.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.stop">
+            function <span class="apidocSignatureSpan">node-red.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.version">
+            function <span class="apidocSignatureSpan">node-red.</span>version
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>auth</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>comms</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>library</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>log</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>nodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>server</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.auth">module node-red.auth</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.auth.needsPermission">
+            function <span class="apidocSignatureSpan">node-red.auth.</span>needsPermission
+            <span class="apidocSignatureSpan">(permission)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.comms">module node-red.comms</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.comms.publish">
+            function <span class="apidocSignatureSpan">node-red.comms.</span>publish
+            <span class="apidocSignatureSpan">(topic, data, retain)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.library">module node-red.library</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.library.register">
+            function <span class="apidocSignatureSpan">node-red.library.</span>register
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.log">module node-red.log</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.log">
+            function <span class="apidocSignatureSpan">node-red.</span>log
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log._">
+            function <span class="apidocSignatureSpan">node-red.log.</span>_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.addHandler">
+            function <span class="apidocSignatureSpan">node-red.log.</span>addHandler
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.audit">
+            function <span class="apidocSignatureSpan">node-red.log.</span>audit
+            <span class="apidocSignatureSpan">(msg, req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.debug">
+            function <span class="apidocSignatureSpan">node-red.log.</span>debug
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.error">
+            function <span class="apidocSignatureSpan">node-red.log.</span>error
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.info">
+            function <span class="apidocSignatureSpan">node-red.log.</span>info
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.init">
+            function <span class="apidocSignatureSpan">node-red.log.</span>init
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.metric">
+            function <span class="apidocSignatureSpan">node-red.log.</span>metric
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.removeHandler">
+            function <span class="apidocSignatureSpan">node-red.log.</span>removeHandler
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.trace">
+            function <span class="apidocSignatureSpan">node-red.log.</span>trace
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.log.warn">
+            function <span class="apidocSignatureSpan">node-red.log.</span>warn
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>AUDIT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>DEBUG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>ERROR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>FATAL</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>INFO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>METRIC</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>TRACE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.log.</span>WARN</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.nodes">module node-red.nodes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.addCredentials">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>addCredentials
+            <span class="apidocSignatureSpan">(id, creds)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.addFlow">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>addFlow
+            <span class="apidocSignatureSpan">(flow)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.cleanModuleList">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>cleanModuleList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.clearRegistry">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>clearRegistry
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.createNode">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>createNode
+            <span class="apidocSignatureSpan">(node, def)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.deleteCredentials">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>deleteCredentials
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.disableNode">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>disableNode
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.eachNode">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>eachNode
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.enableNode">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>enableNode
+            <span class="apidocSignatureSpan">(typeOrId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getCredentialDefinition">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getCredentialDefinition
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getCredentials">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getCredentials
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getFlow">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getFlow
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getFlows">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getFlows
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getModuleInfo">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getModuleInfo
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getNode">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getNode
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getNodeConfig">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeConfig
+            <span class="apidocSignatureSpan">(id, lang)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getNodeConfigs">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeConfigs
+            <span class="apidocSignatureSpan">(lang)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getNodeInfo">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeInfo
+            <span class="apidocSignatureSpan">(typeOrId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getNodeList">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeList
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.getType">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>getType
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.init">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>init
+            <span class="apidocSignatureSpan">(runtime)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.installModule">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>installModule
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.load">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>load
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.loadFlows">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>loadFlows
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.paletteEditorEnabled">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>paletteEditorEnabled
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.registerType">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>registerType
+            <span class="apidocSignatureSpan">(nodeSet, type, constructor, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.removeFlow">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>removeFlow
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.setFlows">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>setFlows
+            <span class="apidocSignatureSpan">(_config, type, muteLog)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.startFlows">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>startFlows
+            <span class="apidocSignatureSpan">(type, diff, muteLog)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.stopFlows">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>stopFlows
+            <span class="apidocSignatureSpan">(type, diff, muteLog)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.uninstallModule">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>uninstallModule
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.nodes.updateFlow">
+            function <span class="apidocSignatureSpan">node-red.nodes.</span>updateFlow
+            <span class="apidocSignatureSpan">(id, newFlow)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.settings">module node-red.settings</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-red.settings.</span>disableEditor</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.available">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>available
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.delete">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>delete
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.get">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>get
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.init">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>init
+            <span class="apidocSignatureSpan">(settings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.load">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>load
+            <span class="apidocSignatureSpan">(_storage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.reset">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.settings.set">
+            function <span class="apidocSignatureSpan">node-red.settings.</span>set
+            <span class="apidocSignatureSpan">(prop, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.settings.</span>debugMaxLength</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.settings.</span>mqttReconnectTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">node-red.settings.</span>serialReconnectTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.settings.</span>functionGlobalContext</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-red.settings.</span>logging</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>coreNodesDir</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>httpAdminRoot</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>httpNodeRoot</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>httpRoot</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>settingsFile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>uiHost</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>uiPort</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-red.settings.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-red.util">module node-red.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.cloneMessage">
+            function <span class="apidocSignatureSpan">node-red.util.</span>cloneMessage
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.compareObjects">
+            function <span class="apidocSignatureSpan">node-red.util.</span>compareObjects
+            <span class="apidocSignatureSpan">(obj1, obj2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.ensureBuffer">
+            function <span class="apidocSignatureSpan">node-red.util.</span>ensureBuffer
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.ensureString">
+            function <span class="apidocSignatureSpan">node-red.util.</span>ensureString
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.evaluateNodeProperty">
+            function <span class="apidocSignatureSpan">node-red.util.</span>evaluateNodeProperty
+            <span class="apidocSignatureSpan">(value, type, node, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.generateId">
+            function <span class="apidocSignatureSpan">node-red.util.</span>generateId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.getMessageProperty">
+            function <span class="apidocSignatureSpan">node-red.util.</span>getMessageProperty
+            <span class="apidocSignatureSpan">(msg, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.normalisePropertyExpression">
+            function <span class="apidocSignatureSpan">node-red.util.</span>normalisePropertyExpression
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-red.util.setMessageProperty">
+            function <span class="apidocSignatureSpan">node-red.util.</span>setMessageProperty
+            <span class="apidocSignatureSpan">(msg, prop, value, createMissing)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red" id="apidoc.module.node-red">module node-red</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.httpAdmin" id="apidoc.element.node-red.httpAdmin">
+        function <span class="apidocSignatureSpan">node-red.</span>httpAdmin
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">httpAdmin = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.httpNode" id="apidoc.element.node-red.httpNode">
+        function <span class="apidocSignatureSpan">node-red.</span>httpNode
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">httpNode = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.init" id="apidoc.element.node-red.init">
+        function <span class="apidocSignatureSpan">node-red.</span>init
+        <span class="apidocSignatureSpan">(httpServer, userSettings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (httpServer, userSettings) {
+    if (!userSettings) {
+        userSettings = httpServer;
+        httpServer = null;
+    }
+
+    if (!userSettings.SKIP_BUILD_CHECK) {
+        checkVersion(userSettings);
+        checkBuild();
+    }
+
+    if (!userSettings.coreNodesDir) {
+        userSettings.coreNodesDir = path.resolve(path.join(__dirname,"..","nodes"));
+    }
+
+    if (userSettings.httpAdminRoot !== false) {
+        runtime.init(userSettings,api);
+        api.init(httpServer,runtime);
+        apiEnabled = true;
+    } else {
+        runtime.init(userSettings);
+        apiEnabled = false;
+    }
+    adminApp = runtime.adminApi.adminApp;
+    nodeApp = runtime.nodeApp;
+    server = runtime.adminApi.server;
+    return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+settings.flowFile = flowFile;
+}
+if (parsedArgs.userDir) {
+settings.userDir = parsedArgs.userDir;
+}
+
+try {
+RED.<span class="apidocCodeKeywordSpan">init</span>(server,settings);
+} catch(err) {
+if (err.code == "unsupported_version") {
+    console.log("Unsupported version of node.js:",process.version);
+    console.log("Node-RED requires node.js v4 or later");
+} else if  (err.code == "not_built") {
+    console.log("Node-RED has not been built. See README.md for details");
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.start" id="apidoc.element.node-red.start">
+        function <span class="apidocSignatureSpan">node-red.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+    return runtime.start().then(function() {
+        if (apiEnabled) {
+            return api.start();
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    listenPath += settings.httpAdminRoot;
+} else if (settings.httpStatic) {
+    listenPath += "/";
+}
+return listenPath;
+}
+
+RED.<span class="apidocCodeKeywordSpan">start</span>().then(function() {
+if (settings.httpAdminRoot !== false || settings.httpNodeRoot !== false || settings.httpStatic) {
+    server.on('error', function(err) {
+        if (err.errno === "EADDRINUSE") {
+            RED.log.error(RED.log._("server.unable-to-listen", {listenpath:getListenPath()}));
+            RED.log.error(RED.log._("server.port-in-use"));
+        } else {
+            RED.log.error(RED.log._("server.uncaught-exception"));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.stop" id="apidoc.element.node-red.stop">
+        function <span class="apidocSignatureSpan">node-red.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    return runtime.stop().then(function() {
+        if (apiEnabled) {
+            return api.stop();
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    } else {
+        util.log(err);
+    }
+    process.exit(1);
+});
+
+process.on('SIGINT', function () {
+    RED.<span class="apidocCodeKeywordSpan">stop</span>();
+    // TODO: need to allow nodes to close asynchronously before terminating the
+    // process - ie, promises
+    process.exit();
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.version" id="apidoc.element.node-red.version">
+        function <span class="apidocSignatureSpan">node-red.</span>version
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getVersion() {
+    if (!version) {
+        version = require(path.join(__dirname,"..","..","package.json")).version;
+<span class="apidocCodeCommentSpan">        /* istanbul ignore else */
+</span>        try {
+            fs.statSync(path.join(__dirname,"..","..",".git"));
+            version += "-git";
+        } catch(err) {
+            // No git directory
+        }
+    }
+    return version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+nopt.invalidHandler = function(k,v,t) {
+// TODO: console.log(k,v,t);
+}
+
+var parsedArgs = nopt(knownOpts,shortHands,process.argv,2)
+
+if (parsedArgs.help) {
+console.log("Node-RED v"+RED.<span class="apidocCodeKeywordSpan">version</span>());
+console.log("Usage: node-red [-v] [-?] [--settings settings.js] [--userDir DIR]");
+console.log("                [--port PORT] [--title TITLE] [flows.json]");
+console.log("");
+console.log("Options:");
+console.log("  -p, --port     PORT  port to listen on");
+console.log("  -s, --settings FILE  use specified settings file");
+console.log("      --title    TITLE process window title");
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.auth" id="apidoc.module.node-red.auth">module node-red.auth</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.auth.needsPermission" id="apidoc.element.node-red.auth.needsPermission">
+        function <span class="apidocSignatureSpan">node-red.auth.</span>needsPermission
+        <span class="apidocSignatureSpan">(permission)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function needsPermission(permission) {
+    return function(req,res,next) {
+        if (settings &amp;&amp; settings.adminAuth) {
+            return passport.authenticate(['bearer','anon'],{ session: false })(req,res,function() {
+                if (!req.user) {
+                    return next();
+                }
+                if (permissions.hasPermission(req.authInfo.scope,permission)) {
+                    return next();
+                }
+                log.audit({event: "permission.fail", permissions: permission},req);
+                return res.status(401).end();
+            });
+        } else {
+            next();
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.comms" id="apidoc.module.node-red.comms">module node-red.comms</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.comms.publish" id="apidoc.element.node-red.comms.publish">
+        function <span class="apidocSignatureSpan">node-red.comms.</span>publish
+        <span class="apidocSignatureSpan">(topic, data, retain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function publish(topic, data, retain) {
+    if (server) {
+        if (retain) {
+            retained[topic] = data;
+        } else {
+            delete retained[topic];
+        }
+        lastSentTime = Date.now();
+        activeConnections.forEach(function(conn) {
+            publishTo(conn,topic,data);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.library" id="apidoc.module.node-red.library">module node-red.library</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.library.register" id="apidoc.element.node-red.library.register">
+        function <span class="apidocSignatureSpan">node-red.library.</span>register
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createLibrary(type) {
+    if (redApp) {
+        redApp.get(new RegExp("/library/"+type+"($|\/(.*))"),needsPermission("library.read"),function(req,res) {
+            var path = req.params[1]||"";
+            storage.getLibraryEntry(type,path).then(function(result) {
+                log.audit({event: "library.get",type:type},req);
+                if (typeof result === "string") {
+                    res.writeHead(200, {'Content-Type': 'text/plain'});
+                    res.write(result);
+                    res.end();
+                } else {
+                    res.json(result);
+                }
+            }).otherwise(function(err) {
+                if (err) {
+                    log.warn(log._("api.library.error-load-entry",{path:path,message:err.toString()}));
+                    if (err.code === 'forbidden') {
+                        log.audit({event: "library.get",type:type,error:"forbidden"},req);
+                        res.status(403).end();
+                        return;
+                    }
+                }
+                log.audit({event: "library.get",type:type,error:"not_found"},req);
+                res.status(404).end();
+            });
+        });
+
+        redApp.post(new RegExp("/library/"+type+"\/(.*)"),needsPermission("library.write"),function(req,res) {
+            var path = req.params[0];
+            var meta = req.body;
+            var text = meta.text;
+            delete meta.text;
+
+            storage.saveLibraryEntry(type,path,meta,text).then(function() {
+                log.audit({event: "library.set",type:type},req);
+                res.status(204).end();
+            }).otherwise(function(err) {
+                log.warn(log._("api.library.error-save-entry",{path:path,message:err.toString()}));
+                    if (err.code === 'forbidden') {
+                    log.audit({event: "library.set",type:type,error:"forbidden"},req);
+                    res.status(403).end();
+                    return;
+                }
+                log.audit({event: "library.set",type:type,error:"unexpected_error",message:err.toString()},req);
+                res.status(500).json({error:"unexpected_error", message:err.toString()});
+            });
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.log" id="apidoc.module.node-red.log">module node-red.log</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.log" id="apidoc.element.node-red.log.log">
+        function <span class="apidocSignatureSpan">node-red.</span>log
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (msg) {
+    msg.timestamp = Date.now();
+    logHandlers.forEach(function(handler) {
+        handler.emit("log",msg);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// As we want to reserve -t for now, adding a shorthand to help so it
+// doesn't get treated as --title
+"t":["--help"],
+"u":["--userDir"],
+"v":["--verbose"]
+};
+nopt.invalidHandler = function(k,v,t) {
+// TODO: console.<span class="apidocCodeKeywordSpan">log</span>(k,v,t);
+}
+
+var parsedArgs = nopt(knownOpts,shortHands,process.argv,2)
+
+if (parsedArgs.help) {
+console.log("Node-RED v"+RED.version());
+console.log("Usage: node-red [-v] [-?] [--settings settings.js] [--userDir DIR]");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log._" id="apidoc.element.node-red.log._">
+        function <span class="apidocSignatureSpan">node-red.log.</span>_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_ = function () {
+    //var opts = {};
+    //if (def) {
+    //    opts.defaultValue = def;
+    //}
+    //console.log(arguments);
+    return i18n.t.apply(null,arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            return res.sendStatus(401);
+        }
+        next();
+    }
+}
+
+if (settings.httpAdminRoot !== false &amp;&amp; settings.httpAdminAuth) {
+    RED.log.warn(RED.log.<span class="apidocCodeKeywordSpan">_</span>("server.httpadminauth-deprecated"));
+    app.use(settings.httpAdminRoot, basicAuthMiddleware(settings.httpAdminAuth.user,settings.httpAdminAuth.pass));
+}
+
+if (settings.httpAdminRoot !== false) {
+    app.use(settings.httpAdminRoot,RED.httpAdmin);
+}
+if (settings.httpNodeRoot !== false &amp;&amp; settings.httpNodeAuth) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.addHandler" id="apidoc.element.node-red.log.addHandler">
+        function <span class="apidocSignatureSpan">node-red.log.</span>addHandler
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addHandler = function (func) {
+    logHandlers.push(func);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.audit" id="apidoc.element.node-red.log.audit">
+        function <span class="apidocSignatureSpan">node-red.log.</span>audit
+        <span class="apidocSignatureSpan">(msg, req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">audit = function (msg, req) {
+    msg.level = log.AUDIT;
+    if (req) {
+        msg.user = req.user;
+        msg.path = req.path;
+        msg.ip = (req.headers &amp;&amp; req.headers['x-forwarded-for']) || (req.connection &amp;&amp; req.connection.remoteAddress) || undefined
+;
+    }
+    log.log(msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.debug" id="apidoc.element.node-red.log.debug">
+        function <span class="apidocSignatureSpan">node-red.log.</span>debug
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (msg) {
+    log.log({level:log.DEBUG,msg:msg});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.error" id="apidoc.element.node-red.log.error">
+        function <span class="apidocSignatureSpan">node-red.log.</span>error
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg) {
+    log.log({level:log.ERROR,msg:msg});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return listenPath;
+}
+
+RED.start().then(function() {
+if (settings.httpAdminRoot !== false || settings.httpNodeRoot !== false || settings.httpStatic) {
+    server.on('error', function(err) {
+        if (err.errno === "EADDRINUSE") {
+            RED.log.<span class="apidocCodeKeywordSpan">error</span>(RED.log._("server.unable-to-listen", {listenpath:
+getListenPath()}));
+            RED.log.error(RED.log._("server.port-in-use"));
+        } else {
+            RED.log.error(RED.log._("server.uncaught-exception"));
+            if (err.stack) {
+                RED.log.error(err.stack);
+            } else {
+                RED.log.error(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.info" id="apidoc.element.node-red.log.info">
+        function <span class="apidocSignatureSpan">node-red.log.</span>info
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (msg) {
+    log.log({level:log.INFO,msg:msg});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                RED.log.error(err);
+            }
+        }
+        process.exit(1);
+    });
+    server.listen(settings.uiPort,settings.uiHost,function() {
+        if (settings.httpAdminRoot === false) {
+            RED.log.<span class="apidocCodeKeywordSpan">info</span>(RED.log._("server.admin-ui-disabled"));
+        }
+        process.title = parsedArgs.title || 'node-red';
+        RED.log.info(RED.log._("server.now-running", {listenpath:getListenPath()}));
+    });
+} else {
+    RED.log.info(RED.log._("server.headless-mode"));
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.init" id="apidoc.element.node-red.log.init">
+        function <span class="apidocSignatureSpan">node-red.log.</span>init
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (settings) {
+    metricsEnabled = false;
+    logHandlers = [];
+    var loggerSettings = {};
+    if (settings.logging) {
+        var keys = Object.keys(settings.logging);
+        if (keys.length === 0) {
+            log.addHandler(new LogHandler());
+        } else {
+            for (var i=0, l=keys.length; i&lt;l; i++) {
+                var config = settings.logging[keys[i]];
+                loggerSettings = config || {};
+                if ((keys[i] === "console") || config.handler) {
+                    log.addHandler(new LogHandler(loggerSettings));
+                }
+            }
+        }
+    } else {
+        log.addHandler(new LogHandler());
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+settings.flowFile = flowFile;
+}
+if (parsedArgs.userDir) {
+settings.userDir = parsedArgs.userDir;
+}
+
+try {
+RED.<span class="apidocCodeKeywordSpan">init</span>(server,settings);
+} catch(err) {
+if (err.code == "unsupported_version") {
+    console.log("Unsupported version of node.js:",process.version);
+    console.log("Node-RED requires node.js v4 or later");
+} else if  (err.code == "not_built") {
+    console.log("Node-RED has not been built. See README.md for details");
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.metric" id="apidoc.element.node-red.log.metric">
+        function <span class="apidocSignatureSpan">node-red.log.</span>metric
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metric = function () {
+    return metricsEnabled;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.removeHandler" id="apidoc.element.node-red.log.removeHandler">
+        function <span class="apidocSignatureSpan">node-red.log.</span>removeHandler
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeHandler = function (func) {
+    var index = logHandlers.indexOf(func);
+    if (index &gt; -1) {
+        logHandlers.splice(index,1);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.trace" id="apidoc.element.node-red.log.trace">
+        function <span class="apidocSignatureSpan">node-red.log.</span>trace
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trace = function (msg) {
+    log.log({level:log.TRACE,msg:msg});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.log.warn" id="apidoc.element.node-red.log.warn">
+        function <span class="apidocSignatureSpan">node-red.log.</span>warn
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (msg) {
+    log.log({level:log.WARN,msg:msg});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            return res.sendStatus(401);
+        }
+        next();
+    }
+}
+
+if (settings.httpAdminRoot !== false &amp;&amp; settings.httpAdminAuth) {
+    RED.log.<span class="apidocCodeKeywordSpan">warn</span>(RED.log._("server.httpadminauth-deprecated"));
+    app.use(settings.httpAdminRoot, basicAuthMiddleware(settings.httpAdminAuth.user,settings.httpAdminAuth.pass));
+}
+
+if (settings.httpAdminRoot !== false) {
+    app.use(settings.httpAdminRoot,RED.httpAdmin);
+}
+if (settings.httpNodeRoot !== false &amp;&amp; settings.httpNodeAuth) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.nodes" id="apidoc.module.node-red.nodes">module node-red.nodes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.addCredentials" id="apidoc.element.node-red.nodes.addCredentials">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>addCredentials
+        <span class="apidocSignatureSpan">(id, creds)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addCredentials = function (id, creds) {
+    if (!credentialCache.hasOwnProperty(id) || JSON.stringify(creds) !== JSON.stringify(credentialCache[id])) {
+        credentialCache[id] = creds;
+        dirty = true;
+    }
+    return when.resolve();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.addFlow" id="apidoc.element.node-red.nodes.addFlow">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>addFlow
+        <span class="apidocSignatureSpan">(flow)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addFlow(flow) {
+    var i,node;
+    if (!flow.hasOwnProperty('nodes')) {
+        throw new Error('missing nodes property');
+    }
+    flow.id = redUtil.generateId();
+
+    var nodes = [{
+        type:'tab',
+        label:flow.label,
+        id:flow.id
+    }];
+
+    for (i=0;i&lt;flow.nodes.length;i++) {
+        node = flow.nodes[i];
+        if (activeFlowConfig.allNodes[node.id]) {
+            // TODO nls
+            return when.reject(new Error('duplicate id'));
+        }
+        if (node.type === 'tab' || node.type === 'subflow') {
+            return when.reject(new Error('invalid node type: '+node.type));
+        }
+        node.z = flow.id;
+        nodes.push(node);
+    }
+    if (flow.configs) {
+        for (i=0;i&lt;flow.configs.length;i++) {
+            node = flow.configs[i];
+            if (activeFlowConfig.allNodes[node.id]) {
+                // TODO nls
+                return when.reject(new Error('duplicate id'));
+            }
+            if (node.type === 'tab' || node.type === 'subflow') {
+                return when.reject(new Error('invalid node type: '+node.type));
+            }
+            node.z = flow.id;
+            nodes.push(node);
+        }
+    }
+    var newConfig = clone(activeConfig.flows);
+    newConfig = newConfig.concat(nodes);
+
+    return setFlows(newConfig,'flows',true).then(function() {
+        log.info(log._("nodes.flows.added-flow",{label:(flow.label?flow.label+" ":"")+"["+flow.id+"]"}));
+        return flow.id;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.cleanModuleList" id="apidoc.element.node-red.nodes.cleanModuleList">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>cleanModuleList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cleanModuleList() {
+    var removed = false;
+    for (var mod in moduleConfigs) {
+<span class="apidocCodeCommentSpan">        /* istanbul ignore else */
+</span>        if (moduleConfigs.hasOwnProperty(mod)) {
+            var nodes = moduleConfigs[mod].nodes;
+            var node;
+            if (mod == "node-red") {
+                // For core nodes, look for nodes that are enabled, !loaded and !errored
+                for (node in nodes) {
+                    /* istanbul ignore else */
+                    if (nodes.hasOwnProperty(node)) {
+                        var n = nodes[node];
+                        if (n.enabled &amp;&amp; !n.err &amp;&amp; !n.loaded) {
+                            removeNode(mod+"/"+node);
+                            removed = true;
+                        }
+                    }
+                }
+            } else {
+                if (moduleConfigs[mod] &amp;&amp; !moduleNodes[mod]) {
+                    // For node modules, look for missing ones
+                    for (node in nodes) {
+                        /* istanbul ignore else */
+                        if (nodes.hasOwnProperty(node)) {
+                            removeNode(mod+"/"+node);
+                            removed = true;
+                        }
+                    }
+                    delete moduleConfigs[mod];
+                }
+            }
+        }
+    }
+    if (removed) {
+        saveNodeList();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.clearRegistry" id="apidoc.element.node-red.nodes.clearRegistry">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>clearRegistry
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clear() {
+    nodeConfigCache = null;
+    moduleConfigs = {};
+    nodeList = [];
+    nodeConstructors = {};
+    nodeTypeToId = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.createNode" id="apidoc.element.node-red.nodes.createNode">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>createNode
+        <span class="apidocSignatureSpan">(node, def)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createNode(node, def) {
+    Node.call(node,def);
+    var id = node.id;
+    if (def._alias) {
+        id = def._alias;
+    }
+    var creds = credentials.get(id);
+    if (creds) {
+        //console.log("Attaching credentials to ",node.id);
+        // allow $(foo) syntax to substitute env variables for credentials also...
+        for (var p in creds) {
+            if (creds.hasOwnProperty(p)) {
+                flowUtil.mapEnvVarProperties(creds,p);
+            }
+        }
+        node.credentials = creds;
+    } else if (credentials.getDefinition(node.type)) {
+        node.credentials = {};
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.deleteCredentials" id="apidoc.element.node-red.nodes.deleteCredentials">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>deleteCredentials
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteCredentials = function (id) {
+    delete credentialCache[id];
+    dirty = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.disableNode" id="apidoc.element.node-red.nodes.disableNode">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>disableNode
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function disableNode(id) {
+    flows.checkTypeInUse(id);
+    return registry.disableNode(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.eachNode" id="apidoc.element.node-red.nodes.eachNode">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>eachNode
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eachNode(cb) {
+    for (var id in activeFlowConfig.allNodes) {
+        if (activeFlowConfig.allNodes.hasOwnProperty(id)) {
+            cb(activeFlowConfig.allNodes[id]);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.enableNode" id="apidoc.element.node-red.nodes.enableNode">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>enableNode
+        <span class="apidocSignatureSpan">(typeOrId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enableNodeSet(typeOrId) {
+    return registry.enableNodeSet(typeOrId).then(function() {
+        var nodeSet = registry.getNodeInfo(typeOrId);
+        if (!nodeSet.loaded) {
+            return loader.loadNodeSet(registry.getFullNodeInfo(typeOrId)).then(function() {
+                return registry.getNodeInfo(typeOrId);
+            });
+        }
+        return when.resolve(nodeSet);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getCredentialDefinition" id="apidoc.element.node-red.nodes.getCredentialDefinition">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getCredentialDefinition
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCredentialDefinition = function (type) {
+    return credentialsDef[type];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getCredentials" id="apidoc.element.node-red.nodes.getCredentials">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getCredentials
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCredentials = function (id) {
+    return credentialCache[id];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getFlow" id="apidoc.element.node-red.nodes.getFlow">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getFlow
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFlow(id) {
+    var flow;
+    if (id === 'global') {
+        flow = activeFlowConfig;
+    } else {
+        flow = activeFlowConfig.flows[id];
+    }
+    if (!flow) {
+        return null;
+    }
+    var result = {
+        id: id
+    };
+    if (flow.label) {
+        result.label = flow.label;
+    }
+    if (id !== 'global') {
+        result.nodes = [];
+    }
+    if (flow.nodes) {
+        var nodeIds = Object.keys(flow.nodes);
+        if (nodeIds.length &gt; 0) {
+            result.nodes = nodeIds.map(function(nodeId) {
+                var node = clone(flow.nodes[nodeId]);
+                if (node.type === 'link out') {
+                    delete node.wires;
+                }
+                return node;
+            })
+        }
+    }
+    if (flow.configs) {
+        var configIds = Object.keys(flow.configs);
+        result.configs = configIds.map(function(configId) {
+            return clone(flow.configs[configId]);
+        })
+        if (result.configs.length === 0) {
+            delete result.configs;
+        }
+    }
+    if (flow.subflows) {
+        var subflowIds = Object.keys(flow.subflows);
+        result.subflows = subflowIds.map(function(subflowId) {
+            var subflow = clone(flow.subflows[subflowId]);
+            var nodeIds = Object.keys(subflow.nodes);
+            subflow.nodes = nodeIds.map(function(id) {
+                return subflow.nodes[id];
+            });
+            if (subflow.configs) {
+                var configIds = Object.keys(subflow.configs);
+                subflow.configs = configIds.map(function(id) {
+                    return subflow.configs[id];
+                })
+            }
+            delete subflow.instances;
+            return subflow;
+        });
+        if (result.subflows.length === 0) {
+            delete result.subflows;
+        }
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getFlows" id="apidoc.element.node-red.nodes.getFlows">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getFlows
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFlows() {
+    return activeConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getModuleInfo" id="apidoc.element.node-red.nodes.getModuleInfo">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getModuleInfo
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getModuleInfo(module) {
+    if (moduleNodes[module]) {
+        var nodes = moduleNodes[module];
+        var m = {
+            name: module,
+            version: moduleConfigs[module].version,
+            local: moduleConfigs[module].local,
+            nodes: []
+        };
+        for (var i = 0; i &lt; nodes.length; ++i) {
+            var nodeInfo = filterNodeInfo(moduleConfigs[module].nodes[nodes[i]]);
+            nodeInfo.version = m.version;
+            m.nodes.push(nodeInfo);
+        }
+        return m;
+    } else {
+        return null;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getNode" id="apidoc.element.node-red.nodes.getNode">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getNode
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNode(id) {
+    var node;
+    if (activeNodesToFlow[id] &amp;&amp; activeFlows[activeNodesToFlow[id]]) {
+        return activeFlows[activeNodesToFlow[id]].getNode(id);
+    }
+    for (var flowId in activeFlows) {
+        if (activeFlows.hasOwnProperty(flowId)) {
+            node = activeFlows[flowId].getNode(id);
+            if (node) {
+                return node;
+            }
+        }
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getNodeConfig" id="apidoc.element.node-red.nodes.getNodeConfig">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeConfig
+        <span class="apidocSignatureSpan">(id, lang)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNodeConfig(id, lang) {
+    var config = moduleConfigs[getModule(id)];
+    if (!config) {
+        return null;
+    }
+    config = config.nodes[getNode(id)];
+    if (config) {
+        var result = config.config;
+        result += loader.getNodeHelp(config,lang||"en-US")
+
+        //if (config.script) {
+        //    result += '&lt;script type="text/javascript"&gt;'+config.script+'&lt;/script&gt;';
+        //}
+        return result;
+    } else {
+        return null;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getNodeConfigs" id="apidoc.element.node-red.nodes.getNodeConfigs">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeConfigs
+        <span class="apidocSignatureSpan">(lang)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAllNodeConfigs(lang) {
+    if (!nodeConfigCache) {
+        var result = "";
+        var script = "";
+        for (var i=0;i&lt;nodeList.length;i++) {
+            var id = nodeList[i];
+            var config = moduleConfigs[getModule(id)].nodes[getNode(id)];
+            if (config.enabled &amp;&amp; !config.err) {
+                result += config.config;
+                result += loader.getNodeHelp(config,lang||"en-US")||"";
+                //script += config.script;
+            }
+        }
+        //if (script.length &gt; 0) {
+        //    result += '&lt;script type="text/javascript"&gt;';
+        //    result += UglifyJS.minify(script, {fromString: true}).code;
+        //    result += '&lt;/script&gt;';
+        //}
+        nodeConfigCache = result;
+    }
+    return nodeConfigCache;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getNodeInfo" id="apidoc.element.node-red.nodes.getNodeInfo">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeInfo
+        <span class="apidocSignatureSpan">(typeOrId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNodeInfo(typeOrId) {
+    var id = typeOrId;
+    if (nodeTypeToId.hasOwnProperty(typeOrId)) {
+        id = nodeTypeToId[typeOrId];
+    }
+<span class="apidocCodeCommentSpan">    /* istanbul ignore else */
+</span>    if (id) {
+        var module = moduleConfigs[getModule(id)];
+        if (module) {
+            var config = module.nodes[getNode(id)];
+            if (config) {
+                var info = filterNodeInfo(config);
+                if (config.hasOwnProperty("loaded")) {
+                    info.loaded = config.loaded;
+                }
+                info.version = module.version;
+                return info;
+            }
+        }
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getNodeList" id="apidoc.element.node-red.nodes.getNodeList">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getNodeList
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNodeList(filter) {
+    var list = [];
+    for (var module in moduleConfigs) {
+<span class="apidocCodeCommentSpan">        /* istanbul ignore else */
+</span>        if (moduleConfigs.hasOwnProperty(module)) {
+            var nodes = moduleConfigs[module].nodes;
+            for (var node in nodes) {
+                /* istanbul ignore else */
+                if (nodes.hasOwnProperty(node)) {
+                    var nodeInfo = filterNodeInfo(nodes[node]);
+                    nodeInfo.version = moduleConfigs[module].version;
+                    if (!filter || filter(nodes[node])) {
+                        list.push(nodeInfo);
+                    }
+                }
+            }
+        }
+    }
+    return list;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.getType" id="apidoc.element.node-red.nodes.getType">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>getType
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNodeConstructor(type) {
+    var id = nodeTypeToId[type];
+
+    var config;
+    if (typeof id === "undefined") {
+        config = undefined;
+    } else {
+        config = moduleConfigs[getModule(id)].nodes[getNode(id)];
+    }
+
+    if (!config || (config.enabled &amp;&amp; !config.err)) {
+        return nodeConstructors[type];
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.init" id="apidoc.element.node-red.nodes.init">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>init
+        <span class="apidocSignatureSpan">(runtime)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(runtime) {
+    settings = runtime.settings;
+    credentials.init(runtime);
+    flows.init(runtime);
+    registry.init(runtime);
+    context.init(runtime.settings);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+settings.flowFile = flowFile;
+}
+if (parsedArgs.userDir) {
+settings.userDir = parsedArgs.userDir;
+}
+
+try {
+RED.<span class="apidocCodeKeywordSpan">init</span>(server,settings);
+} catch(err) {
+if (err.code == "unsupported_version") {
+    console.log("Unsupported version of node.js:",process.version);
+    console.log("Node-RED requires node.js v4 or later");
+} else if  (err.code == "not_built") {
+    console.log("Node-RED has not been built. See README.md for details");
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.installModule" id="apidoc.element.node-red.nodes.installModule">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>installModule
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function installModule(module) {
+    //TODO: ensure module is 'safe'
+    return when.promise(function(resolve,reject) {
+        var installName = module;
+
+        try {
+            if (moduleRe.test(module)) {
+                // Simple module name - assume it can be npm installed
+            } else if (slashRe.test(module)) {
+                // A path - check if there's a valid package.json
+                installName = module;
+                module = checkModulePath(module);
+            }
+            checkExistingModule(module);
+        } catch(err) {
+            return reject(err);
+        }
+        log.info(log._("server.install.installing",{name: module}));
+
+        var installDir = settings.userDir || process.env.NODE_RED_HOME || ".";
+        var child = child_process.execFile(npmCommand,['install','--production',installName],
+            {
+                cwd: installDir
+            },
+            function(err, stdin, stdout) {
+                if (err) {
+                    var lookFor404 = new RegExp(" 404 .*"+installName+"$","m");
+                    if (lookFor404.test(stdout)) {
+                        log.warn(log._("server.install.install-failed-not-found",{name:module}));
+                        var e = new Error("Module not found");
+                        e.code = 404;
+                        reject(e);
+                    } else {
+                        log.warn(log._("server.install.install-failed-long",{name:module}));
+                        log.warn("------------------------------------------");
+                        log.warn(err.toString());
+                        log.warn("------------------------------------------");
+                        reject(new Error(log._("server.install.install-failed")));
+                    }
+                } else {
+                    log.info(log._("server.install.installed",{name:module}));
+                    resolve(require("./index").addModule(module).then(reportAddedModules));
+                }
+            }
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.load" id="apidoc.element.node-red.nodes.load">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>load
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load() {
+    registry.load();
+    return installer.checkPrereq().then(loader.load);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.loadFlows" id="apidoc.element.node-red.nodes.loadFlows">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>loadFlows
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load() {
+    return setFlows(null,"load",false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.paletteEditorEnabled" id="apidoc.element.node-red.nodes.paletteEditorEnabled">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>paletteEditorEnabled
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paletteEditorEnabled = function () {
+    return paletteEditorEnabled
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.registerType" id="apidoc.element.node-red.nodes.registerType">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>registerType
+        <span class="apidocSignatureSpan">(nodeSet, type, constructor, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerType(nodeSet, type, constructor, opts) {
+    if (typeof type !== "string") {
+        // This is someone calling the api directly, rather than via the
+        // RED object provided to a node. Log a warning
+        log.warn("["+nodeSet+"] Deprecated call to RED.runtime.nodes.registerType - node-set name must be provided as first argument
+");
+        opts = constructor;
+        constructor = type;
+        type = nodeSet;
+        nodeSet = "";
+    }
+    if (opts &amp;&amp; opts.credentials) {
+        credentials.register(type,opts.credentials);
+    }
+    registry.registerType(nodeSet,type,constructor);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.removeFlow" id="apidoc.element.node-red.nodes.removeFlow">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>removeFlow
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeFlow(id) {
+    if (id === 'global') {
+        // TODO: nls + error code
+        throw new Error('not allowed to remove global');
+    }
+    var flow = activeFlowConfig.flows[id];
+    if (!flow) {
+        var e = new Error();
+        e.code = 404;
+        throw e;
+    }
+
+    var newConfig = clone(activeConfig.flows);
+    newConfig = newConfig.filter(function(node) {
+        return node.z !== id &amp;&amp; node.id !== id;
+    });
+
+    return setFlows(newConfig,'flows',true).then(function() {
+        log.info(log._("nodes.flows.removed-flow",{label:(flow.label?flow.label+" ":"")+"["+flow.id+"]"}));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.setFlows" id="apidoc.element.node-red.nodes.setFlows">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>setFlows
+        <span class="apidocSignatureSpan">(_config, type, muteLog)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setFlows(_config, type, muteLog) {
+    type = type||"full";
+
+    var configSavePromise = null;
+    var config = null;
+    var diff;
+    var newFlowConfig;
+    var isLoad = false;
+    if (type === "load") {
+        isLoad = true;
+        configSavePromise = loadFlows().then(function(_config) {
+            config = clone(_config.flows);
+            newFlowConfig = flowUtil.parseConfig(clone(config));
+            type = "full";
+            return _config.rev;
+        });
+    } else {
+        config = clone(_config);
+        newFlowConfig = flowUtil.parseConfig(clone(config));
+        if (type !== 'full') {
+            diff = flowUtil.diffConfigs(activeFlowConfig,newFlowConfig);
+        }
+        credentials.clean(config);
+        var credsDirty = credentials.dirty();
+        configSavePromise = credentials.export().then(function(creds) {
+            var saveConfig = {
+                flows: config,
+                credentialsDirty:credsDirty,
+                credentials: creds
+            }
+            return storage.saveFlows(saveConfig);
+        });
+    }
+
+    return configSavePromise
+        .then(function(flowRevision) {
+            if (!isLoad) {
+                log.debug("saved flow revision: "+flowRevision);
+            }
+            activeConfig = {
+                flows:config,
+                rev:flowRevision
+            };
+            activeFlowConfig = newFlowConfig;
+            if (started) {
+                return stop(type,diff,muteLog).then(function() {
+                    context.clean(activeFlowConfig);
+                    start(type,diff,muteLog);
+                    return flowRevision;
+                }).otherwise(function(err) {
+                })
+            }
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.startFlows" id="apidoc.element.node-red.nodes.startFlows">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>startFlows
+        <span class="apidocSignatureSpan">(type, diff, muteLog)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(type, diff, muteLog) {
+    //dumpActiveNodes();
+    type = type||"full";
+    started = true;
+    var i;
+    if (activeFlowConfig.missingTypes.length &gt; 0) {
+        log.info(log._("nodes.flows.missing-types"));
+        var knownUnknowns = 0;
+        for (i=0;i&lt;activeFlowConfig.missingTypes.length;i++) {
+            var nodeType = activeFlowConfig.missingTypes[i];
+            var info = deprecated.get(nodeType);
+            if (info) {
+                log.info(log._("nodes.flows.missing-type-provided",{type:activeFlowConfig.missingTypes[i],module:info.module}));
+                knownUnknowns += 1;
+            } else {
+                log.info(" - "+activeFlowConfig.missingTypes[i]);
+            }
+        }
+        if (knownUnknowns &gt; 0) {
+            log.info(log._("nodes.flows.missing-type-install-1"));
+            log.info("  npm install &lt;module name&gt;");
+            log.info(log._("nodes.flows.missing-type-install-2"));
+            log.info("  "+settings.userDir);
+        }
+        events.emit("runtime-event",{id:"runtime-state",type:"warning",text:"notification.warnings.missing-types"});
+        return when.resolve();
+    }
+    if (!muteLog) {
+        if (diff) {
+            log.info(log._("nodes.flows.starting-modified-"+type));
+        } else {
+            log.info(log._("nodes.flows.starting-flows"));
+        }
+    }
+    var id;
+    if (!diff) {
+        if (!activeFlows['global']) {
+            activeFlows['global'] = Flow.create(activeFlowConfig);
+        }
+        for (id in activeFlowConfig.flows) {
+            if (activeFlowConfig.flows.hasOwnProperty(id)) {
+                if (!activeFlows[id]) {
+                    activeFlows[id] = Flow.create(activeFlowConfig,activeFlowConfig.flows[id]);
+                }
+            }
+        }
+    } else {
+        activeFlows['global'].update(activeFlowConfig,activeFlowConfig);
+        for (id in activeFlowConfig.flows) {
+            if (activeFlowConfig.flows.hasOwnProperty(id)) {
+                if (activeFlows[id]) {
+                    activeFlows[id].update(activeFlowConfig,activeFlowConfig.flows[id]);
+                } else {
+                    activeFlows[id] = Flow.create(activeFlowConfig,activeFlowConfig.flows[id]);
+                }
+            }
+        }
+    }
+
+    for (id in activeFlows) {
+        if (activeFlows.hasOwnProperty(id)) {
+            activeFlows[id].start(diff);
+            var activeNodes = activeFlows[id].getActiveNodes();
+            Object.keys(activeNodes).forEach(function(nid) {
+                activeNodesToFlow[nid] = id;
+                if (activeNodes[nid]._alias) {
+                    subflowInstanceNodeMap[activeNodes[nid]._alias] = subflowInstanceNodeMap[activeNodes[nid]._alias] || [];
+                    subflowInstanceNodeMap[activeNodes[nid]._alias].push(nid);
+                }
+            });
+
+        }
+    }
+    events.emit("nodes-started");
+    events.emit("runtime-event",{id:"runtime-state"});
+
+    if (!muteLog) {
+        if (diff) {
+            log.info(log._("nodes.flows.started-modified-"+type));
+        } else {
+            log.info(log._("nodes.flows.started-flows"));
+        }
+    }
+    return when.resolve();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.stopFlows" id="apidoc.element.node-red.nodes.stopFlows">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>stopFlows
+        <span class="apidocSignatureSpan">(type, diff, muteLog)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stop(type, diff, muteLog) {
+    type = type||"full";
+    if (!muteLog) {
+        if (diff) {
+            log.info(log._("nodes.flows.stopping-modified-"+type));
+        } else {
+            log.info(log._("nodes.flows.stopping-flows"));
+        }
+    }
+    started = false;
+    var promises = [];
+    var stopList;
+    if (type === 'nodes') {
+        stopList = diff.changed.concat(diff.removed);
+    } else if (type === 'flows') {
+        stopList = diff.changed.concat(diff.removed).concat(diff.linked);
+    }
+    for (var id in activeFlows) {
+        if (activeFlows.hasOwnProperty(id)) {
+            promises = promises.concat(activeFlows[id].stop(stopList));
+            if (!diff || diff.removed.indexOf(id)!==-1) {
+                delete activeFlows[id];
+            }
+        }
+    }
+
+    return when.promise(function(resolve,reject) {
+        when.settle(promises).then(function() {
+            for (id in activeNodesToFlow) {
+                if (activeNodesToFlow.hasOwnProperty(id)) {
+                    if (!activeFlows[activeNodesToFlow[id]]) {
+                        delete activeNodesToFlow[id];
+                    }
+                }
+            }
+            if (stopList) {
+                stopList.forEach(function(id) {
+                    delete activeNodesToFlow[id];
+                });
+            }
+            // Ideally we'd prune just what got stopped - but mapping stopList
+            // id to the list of subflow instance nodes is something only Flow
+            // can do... so cheat by wiping the map knowing it'll be rebuilt
+            // in start()
+            subflowInstanceNodeMap = {};
+            if (!muteLog) {
+                if (diff) {
+                    log.info(log._("nodes.flows.stopped-modified-"+type));
+                } else {
+                    log.info(log._("nodes.flows.stopped-flows"));
+                }
+            }
+            resolve();
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.uninstallModule" id="apidoc.element.node-red.nodes.uninstallModule">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>uninstallModule
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uninstallModule(module) {
+    var info = registry.getModuleInfo(module);
+    if (!info) {
+        throw new Error(log._("nodes.index.unrecognised-module", {module:module}));
+    } else {
+        for (var i=0;i&lt;info.nodes.length;i++) {
+            flows.checkTypeInUse(module+"/"+info.nodes[i].name);
+        }
+        return registry.uninstallModule(module);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.nodes.updateFlow" id="apidoc.element.node-red.nodes.updateFlow">
+        function <span class="apidocSignatureSpan">node-red.nodes.</span>updateFlow
+        <span class="apidocSignatureSpan">(id, newFlow)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateFlow(id, newFlow) {
+    var label = id;
+    if (id !== 'global') {
+        if (!activeFlowConfig.flows[id]) {
+            var e = new Error();
+            e.code = 404;
+            throw e;
+        }
+        label = activeFlowConfig.flows[id].label;
+    }
+    var newConfig = clone(activeConfig.flows);
+    var nodes;
+
+    if (id === 'global') {
+        // Remove all nodes whose z is not a known flow
+        // When subflows can be owned by a flow, this logic will have to take
+        // that into account
+        newConfig = newConfig.filter(function(node) {
+            return node.type === 'tab' || (node.hasOwnProperty('z') &amp;&amp; activeFlowConfig.flows.hasOwnProperty(node.z));
+        })
+
+        // Add in the new config nodes
+        nodes = newFlow.configs||[];
+        if (newFlow.subflows) {
+            // Add in the new subflows
+            newFlow.subflows.forEach(function(sf) {
+                nodes = nodes.concat(sf.nodes||[]).concat(sf.configs||[]);
+                delete sf.nodes;
+                delete sf.configs;
+                nodes.push(sf);
+            });
+        }
+    } else {
+        newConfig = newConfig.filter(function(node) {
+            return node.z !== id &amp;&amp; node.id !== id;
+        });
+        var tabNode = {
+            type:'tab',
+            label:newFlow.label,
+            id:id
+        }
+        nodes = [tabNode].concat(newFlow.nodes||[]).concat(newFlow.configs||[]);
+        nodes.forEach(function(n) {
+            n.z = id;
+        });
+    }
+
+    newConfig = newConfig.concat(nodes);
+    return setFlows(newConfig,'flows',true).then(function() {
+        log.info(log._("nodes.flows.updated-flow",{label:(label?label+" ":"")+"["+id+"]"}));
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.settings" id="apidoc.module.node-red.settings">module node-red.settings</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.available" id="apidoc.element.node-red.settings.available">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>available
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">available = function () {
+    return (globalSettings !== null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.delete" id="apidoc.element.node-red.settings.delete">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>delete
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (prop) {
+    if (userSettings.hasOwnProperty(prop)) {
+        throw new Error(log._("settings.property-read-only", {prop:prop}));
+    }
+    if (globalSettings === null) {
+        throw new Error(log._("settings.not-available"));
+    }
+    if (globalSettings.hasOwnProperty(prop)) {
+        delete globalSettings[prop];
+        return storage.saveSettings(globalSettings);
+    }
+    return when.resolve();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.get" id="apidoc.element.node-red.settings.get">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>get
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (prop) {
+    if (userSettings.hasOwnProperty(prop)) {
+        return clone(userSettings[prop]);
+    }
+    if (globalSettings === null) {
+        throw new Error(log._("settings.not-available"));
+    }
+    return clone(globalSettings[prop]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.init" id="apidoc.element.node-red.settings.init">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>init
+        <span class="apidocSignatureSpan">(settings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (settings) {
+    userSettings = settings;
+    for (var i in settings) {
+<span class="apidocCodeCommentSpan">        /* istanbul ignore else */
+</span>        if (settings.hasOwnProperty(i) &amp;&amp; i !== 'load' &amp;&amp; i !== 'get' &amp;&amp; i !== 'set' &amp;&amp; i !== 'available' &amp;&amp; i !== 'reset') {
+            // Don't allow any of the core functions get replaced via settings
+            (function() {
+                var j = i;
+                persistentSettings.__defineGetter__(j,function() { return userSettings[j]; });
+                persistentSettings.__defineSetter__(j,function() { throw new Error("Property '"+j+"' is read-only"); });
+            })();
+        }
+    }
+    globalSettings = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+settings.flowFile = flowFile;
+}
+if (parsedArgs.userDir) {
+settings.userDir = parsedArgs.userDir;
+}
+
+try {
+RED.<span class="apidocCodeKeywordSpan">init</span>(server,settings);
+} catch(err) {
+if (err.code == "unsupported_version") {
+    console.log("Unsupported version of node.js:",process.version);
+    console.log("Node-RED requires node.js v4 or later");
+} else if  (err.code == "not_built") {
+    console.log("Node-RED has not been built. See README.md for details");
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.load" id="apidoc.element.node-red.settings.load">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>load
+        <span class="apidocSignatureSpan">(_storage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (_storage) {
+    storage = _storage;
+    return storage.getSettings().then(function(_settings) {
+        globalSettings = _settings;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.reset" id="apidoc.element.node-red.settings.reset">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+    for (var i in userSettings) {
+<span class="apidocCodeCommentSpan">        /* istanbul ignore else */
+</span>        if (userSettings.hasOwnProperty(i)) {
+            delete persistentSettings[i];
+        }
+    }
+    userSettings = null;
+    globalSettings = null;
+    storage = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.settings.set" id="apidoc.element.node-red.settings.set">
+        function <span class="apidocSignatureSpan">node-red.settings.</span>set
+        <span class="apidocSignatureSpan">(prop, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (prop, value) {
+    if (userSettings.hasOwnProperty(prop)) {
+        throw new Error(log._("settings.property-read-only", {prop:prop}));
+    }
+    if (globalSettings === null) {
+        throw new Error(log._("settings.not-available"));
+    }
+    var current = globalSettings[prop];
+    globalSettings[prop] = value;
+    try {
+        assert.deepEqual(current,value);
+        return when.resolve();
+    } catch(err) {
+        return storage.saveSettings(globalSettings);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    return function(req,res,next) {
+        if (req.method === 'OPTIONS') {
+            return next();
+        }
+        var requestUser = basicAuth(req);
+        if (!requestUser || requestUser.name !== user || !checkPassword(requestUser.pass)) {
+            res.<span class="apidocCodeKeywordSpan">set</span>('WWW-Authenticate', 'Basic realm=Authorization Required
+');
+            return res.sendStatus(401);
+        }
+        next();
+    }
+}
+
+if (settings.httpAdminRoot !== false &amp;&amp; settings.httpAdminAuth) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-red.util" id="apidoc.module.node-red.util">module node-red.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.cloneMessage" id="apidoc.element.node-red.util.cloneMessage">
+        function <span class="apidocSignatureSpan">node-red.util.</span>cloneMessage
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cloneMessage(msg) {
+    // Temporary fix for #97
+    // TODO: remove this http-node-specific fix somehow
+    var req = msg.req;
+    var res = msg.res;
+    delete msg.req;
+    delete msg.res;
+    var m = clone(msg);
+    if (req) {
+        m.req = req;
+        msg.req = req;
+    }
+    if (res) {
+        m.res = res;
+        msg.res = res;
+    }
+    return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.compareObjects" id="apidoc.element.node-red.util.compareObjects">
+        function <span class="apidocSignatureSpan">node-red.util.</span>compareObjects
+        <span class="apidocSignatureSpan">(obj1, obj2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compareObjects(obj1, obj2) {
+    var i;
+    if (obj1 === obj2) {
+        return true;
+    }
+    if (obj1 == null || obj2 == null) {
+        return false;
+    }
+
+    var isArray1 = Array.isArray(obj1);
+    var isArray2 = Array.isArray(obj2);
+    if (isArray1 != isArray2) {
+        return false;
+    }
+    if (isArray1 &amp;&amp; isArray2) {
+        if (obj1.length !== obj2.length) {
+            return false;
+        }
+        for (i=0;i&lt;obj1.length;i++) {
+            if (!compareObjects(obj1[i],obj2[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    var isBuffer1 = Buffer.isBuffer(obj1);
+    var isBuffer2 = Buffer.isBuffer(obj2);
+    if (isBuffer1 != isBuffer2) {
+        return false;
+    }
+    if (isBuffer1 &amp;&amp; isBuffer2) {
+        if (obj1.equals) {
+            // For node 0.12+ - use the native equals
+            return obj1.equals(obj2);
+        } else {
+            if (obj1.length !== obj2.length) {
+                return false;
+            }
+            for (i=0;i&lt;obj1.length;i++) {
+                if (obj1.readUInt8(i) !== obj2.readUInt8(i)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    if (typeof obj1 !== 'object' || typeof obj2 !== 'object') {
+        return false;
+    }
+    var keys1 = Object.keys(obj1);
+    var keys2 = Object.keys(obj2);
+    if (keys1.length != keys2.length) {
+        return false;
+    }
+    for (var k in obj1) {
+<span class="apidocCodeCommentSpan">        /* istanbul ignore else */
+</span>        if (obj1.hasOwnProperty(k)) {
+            if (!compareObjects(obj1[k],obj2[k])) {
+                return false;
+            }
+        }
+    }
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.ensureBuffer" id="apidoc.element.node-red.util.ensureBuffer">
+        function <span class="apidocSignatureSpan">node-red.util.</span>ensureBuffer
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureBuffer(o) {
+    if (Buffer.isBuffer(o)) {
+        return o;
+    } else if (typeof o === "object") {
+        o = JSON.stringify(o);
+    } else if (typeof o !== "string") {
+        o = ""+o;
+    }
+    return new Buffer(o);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.ensureString" id="apidoc.element.node-red.util.ensureString">
+        function <span class="apidocSignatureSpan">node-red.util.</span>ensureString
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureString(o) {
+    if (Buffer.isBuffer(o)) {
+        return o.toString();
+    } else if (typeof o === "object") {
+        return JSON.stringify(o);
+    } else if (typeof o === "string") {
+        return o;
+    }
+    return ""+o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.evaluateNodeProperty" id="apidoc.element.node-red.util.evaluateNodeProperty">
+        function <span class="apidocSignatureSpan">node-red.util.</span>evaluateNodeProperty
+        <span class="apidocSignatureSpan">(value, type, node, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function evaluateNodeProperty(value, type, node, msg) {
+    if (type === 'str') {
+        return ""+value;
+    } else if (type === 'num') {
+        return Number(value);
+    } else if (type === 'json') {
+        return JSON.parse(value);
+    } else if (type === 're') {
+        return new RegExp(value);
+    } else if (type === 'date') {
+        return Date.now();
+    } else if (type === 'msg' &amp;&amp; msg) {
+        return getMessageProperty(msg,value);
+    } else if (type === 'flow' &amp;&amp; node) {
+        return node.context().flow.get(value);
+    } else if (type === 'global' &amp;&amp; node) {
+        return node.context().global.get(value);
+    } else if (type === 'bool') {
+        return /^true$/i.test(value);
+    } else if (type === 'jsonata') {
+        return jsonata(value).evaluate({msg:msg});
+    }
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.generateId" id="apidoc.element.node-red.util.generateId">
+        function <span class="apidocSignatureSpan">node-red.util.</span>generateId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateId() {
+    return (1+Math.random()*4294967295).toString(16);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.getMessageProperty" id="apidoc.element.node-red.util.getMessageProperty">
+        function <span class="apidocSignatureSpan">node-red.util.</span>getMessageProperty
+        <span class="apidocSignatureSpan">(msg, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMessageProperty(msg, expr) {
+    var result = null;
+    if (expr.indexOf('msg.')===0) {
+        expr = expr.substring(4);
+    }
+    var msgPropParts = normalisePropertyExpression(expr);
+    var m;
+    msgPropParts.reduce(function(obj, key) {
+        result = (typeof obj[key] !== "undefined" ? obj[key] : undefined);
+        return result;
+    }, msg);
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.normalisePropertyExpression" id="apidoc.element.node-red.util.normalisePropertyExpression">
+        function <span class="apidocSignatureSpan">node-red.util.</span>normalisePropertyExpression
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalisePropertyExpression(str) {
+    // This must be kept in sync with validatePropertyExpression
+    // in editor/js/ui/utils.js
+
+    var length = str.length;
+    if (length === 0) {
+        throw new Error("Invalid property expression: zero-length");
+    }
+    var parts = [];
+    var start = 0;
+    var inString = false;
+    var inBox = false;
+    var quoteChar;
+    var v;
+    for (var i=0;i&lt;length;i++) {
+        var c = str[i];
+        if (!inString) {
+            if (c === "'" || c === '"') {
+                if (i != start) {
+                    throw new Error("Invalid property expression: unexpected "+c+" at position "+i);
+                }
+                inString = true;
+                quoteChar = c;
+                start = i+1;
+            } else if (c === '.') {
+                if (i===0) {
+                    throw new Error("Invalid property expression: unexpected . at position 0");
+                }
+                if (start != i) {
+                    v = str.substring(start,i);
+                    if (/^\d+$/.test(v)) {
+                        parts.push(parseInt(v));
+                    } else {
+                        parts.push(v);
+                    }
+                }
+                if (i===length-1) {
+                    throw new Error("Invalid property expression: unterminated expression");
+                }
+                // Next char is first char of an identifier: a-z 0-9 $ _
+                if (!/[a-z0-9\$\_]/i.test(str[i+1])) {
+                    throw new Error("Invalid property expression: unexpected "+str[i+1]+" at position "+(i+1));
+                }
+                start = i+1;
+            } else if (c === '[') {
+                if (i === 0) {
+                    throw new Error("Invalid property expression: unexpected "+c+" at position "+i);
+                }
+                if (start != i) {
+                    parts.push(str.substring(start,i));
+                }
+                if (i===length-1) {
+                    throw new Error("Invalid property expression: unterminated expression");
+                }
+                // Next char is either a quote or a number
+                if (!/["'\d]/.test(str[i+1])) {
+                    throw new Error("Invalid property expression: unexpected "+str[i+1]+" at position "+(i+1));
+                }
+                start = i+1;
+                inBox = true;
+            } else if (c === ']') {
+                if (!inBox) {
+                    throw new Error("Invalid property expression: unexpected "+c+" at position "+i);
+                }
+                if (start != i) {
+                    v = str.substring(start,i);
+                    if (/^\d+$/.test(v)) {
+                        parts.push(parseInt(v));
+                    } else {
+                        throw new Error("Invalid property expression: unexpected array expression at position "+start);
+                    }
+                }
+                start = i+1;
+                inBox = false;
+            } else if (c === ' ') {
+                throw new Error("Invalid property expression: unexpected ' ' at position "+i);
+            }
+        } else {
+            if (c === quoteChar) {
+                if (i-start === 0) {
+                    throw new Error("Invalid property expression: zero-length string at position "+start);
+                }
+                parts.push(str.substring(start,i));
+                // If inBox, next char must be a ]. Otherwise it may be [ or .
+                if (inBox &amp;&amp; !/\]/.test(str[i+1])) {
+                    throw new Error("Invalid property expression: unexpected array expression at position "+start);
+                } else if (!inBox &amp;&amp; i+1!==length &amp;&amp; !/[\[\.]/.test(str[i+1])) {
+                    throw new Error("Invalid property expression: unexpected "+str[i+1]+" expression at position "+(i+1));
+                }
+                start = i+1;
+                inString = false;
+            }
+        }
+
+    }
+    if (inBox || inString) {
+        throw new Error("Invalid property expression: unterminated expression");
+    }
+    if ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-red.util.setMessageProperty" id="apidoc.element.node-red.util.setMessageProperty">
+        function <span class="apidocSignatureSpan">node-red.util.</span>setMessageProperty
+        <span class="apidocSignatureSpan">(msg, prop, value, createMissing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setMessageProperty(msg, prop, value, createMissing) {
+    if (typeof createMissing === 'undefined') {
+        createMissing = (typeof value !== 'undefined');
+    }
+    if (prop.indexOf('msg.')===0) {
+        prop = prop.substring(4);
+    }
+    var msgPropParts = normalisePropertyExpression(prop);
+    var depth = 0;
+    var length = msgPropParts.length;
+    var obj = msg;
+    var key;
+    for (var i=0;i&lt;length-1;i++) {
+        key = msgPropParts[i];
+        if (typeof key === 'string' || (typeof key === 'number' &amp;&amp; !Array.isArray(obj))) {
+            if (obj.hasOwnProperty(key)) {
+                obj = obj[key];
+            } else if (createMissing) {
+                if (typeof msgPropParts[i+1] === 'string') {
+                    obj[key] = {};
+                } else {
+                    obj[key] = [];
+                }
+                obj = obj[key];
+            } else {
+                return null;
+            }
+        } else if (typeof key === 'number') {
+            // obj is an array
+            if (obj[key] === undefined) {
+                if (createMissing) {
+                    if (typeof msgPropParts[i+1] === 'string') {
+                        obj[key] = {};
+                    } else {
+                        obj[key] = [];
+                    }
+                    obj = obj[key];
+                } else {
+                    return null
+                }
+            } else {
+                obj = obj[key];
+            }
+        }
+    }
+    key = msgPropParts[length-1];
+    if (typeof value === "undefined") {
+        if (typeof key === 'number' &amp;&amp; Array.isArray(obj)) {
+            obj.splice(key,1);
+        } else {
+            delete obj[key]
+        }
+    } else {
+        obj[key] = value;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
