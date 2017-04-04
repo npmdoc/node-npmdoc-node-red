@@ -6,7 +6,7 @@
 <tspan x="10" y="58">&gt; (set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)</tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90"></tspan>
-<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-04-03T15:43:19Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
+<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-04-04T08:45:50Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
 <tspan x="10" y="122">node-red</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154"></tspan>
@@ -14,7 +14,7 @@
 <tspan x="10" y="186">c-node-red/test.js</tspan>
 <tspan x="10" y="202">merging file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/build/test-report.json to test\</tspan>
 <tspan x="10" y="218">-report</tspan>
-<tspan x="10" y="234">&gt; server listening on http-port 41651</tspan>
+<tspan x="10" y="234">&gt; server listening on http-port 62424</tspan>
 <tspan x="10" y="250">Deprecated use of RED.app - use RED.httpAdmin instead</tspan>
 <tspan x="10" y="266">Deprecated use of RED.app - use RED.httpAdmin instead</tspan>
 <tspan x="10" y="282">Deprecated use of RED.app - use RED.httpAdmin instead</tspan>
@@ -24,7 +24,7 @@
 <tspan x="10" y="346"></tspan>
 <tspan x="10" y="362"></tspan>
 <tspan x="10" y="378">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-node-red/tmp/ele\</tspan>
-<tspan x="10" y="394">ctron.15b347c1d5a0.675d3c2bce6f7.html</tspan>
+<tspan x="10" y="394">ctron.15b38243f7a0.ec0aeb23cb84b.html</tspan>
 <tspan x="10" y="410"></tspan>
 <tspan x="10" y="426">Deprecated use of RED.app - use RED.httpAdmin instead</tspan>
 <tspan x="10" y="442">Deprecated use of RED.app - use RED.httpAdmin instead</tspan>
@@ -37,66 +37,66 @@
 <tspan x="10" y="554">[node test-case 3 of 6 passed] - testCase_buildTest_default</tspan>
 <tspan x="10" y="570"></tspan>
 <tspan x="10" y="586">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-node-red/tmp/ele\</tspan>
-<tspan x="10" y="602">ctron.15b347c1ea50.f92c2c31686a9.html</tspan>
+<tspan x="10" y="602">ctron.15b382440350.4253e9ffa1349.html</tspan>
 <tspan x="10" y="618"></tspan>
 <tspan x="10" y="634">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="650">3 Apr 15:43:21 - [info] </tspan>
+<tspan x="10" y="650">4 Apr 08:45:51 - [info] </tspan>
 <tspan x="10" y="666"></tspan>
 <tspan x="10" y="682">Welcome to Node-RED</tspan>
 <tspan x="10" y="698">===================</tspan>
 <tspan x="10" y="714"></tspan>
-<tspan x="10" y="730">3 Apr 15:43:21 - [info] Node-RED version: v0.16.2</tspan>
-<tspan x="10" y="746">3 Apr 15:43:21 - [info] Node.js  version: v6.10.1</tspan>
-<tspan x="10" y="762">3 Apr 15:43:21 - [info] Linux 4.4.0-51-generic x64 LE</tspan>
+<tspan x="10" y="730">4 Apr 08:45:51 - [info] Node-RED version: v0.16.2</tspan>
+<tspan x="10" y="746">4 Apr 08:45:51 - [info] Node.js  version: v6.10.1</tspan>
+<tspan x="10" y="762">4 Apr 08:45:51 - [info] Linux 4.4.0-51-generic x64 LE</tspan>
 <tspan x="10" y="778">merging file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/build/test-report.json to test\</tspan>
 <tspan x="10" y="794">-report</tspan>
 <tspan x="10" y="810">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="826">[7597:0403/154321:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="842">[7597:0403/154321:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="858">[7644:0403/154322:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="826">[4972:0404/084552:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="842">[4972:0404/084552:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="858">[5019:0404/084552:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="874">in process gpu-process. </tspan>
-<tspan x="10" y="890">[7597:0403/154322:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
-<tspan x="10" y="906">3 Apr 15:43:22 - [info] Loading palette nodes</tspan>
-<tspan x="10" y="922">&gt; server listening on http-port 41973</tspan>
+<tspan x="10" y="890">4 Apr 08:45:52 - [info] Loading palette nodes</tspan>
+<tspan x="10" y="906">[4972:0404/084552:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="922">&gt; server listening on http-port 53466</tspan>
 <tspan x="10" y="938"></tspan>
 <tspan x="10" y="954">browserTest - opened url /home/travis/build/npmdoc/node-npmdoc-node-red/tmp/build/apidoc.html</tspan>
 <tspan x="10" y="970"></tspan>
 <tspan x="10" y="986">merging file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/build/test-report.json to test\</tspan>
 <tspan x="10" y="1002">-report</tspan>
 <tspan x="10" y="1018">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="1034">[7612:0403/154323:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="1050">[7612:0403/154323:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="1066">[7687:0403/154323:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="1034">[4986:0404/084552:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="1050">[4986:0404/084552:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="1066">[5064:0404/084552:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="1082">in process gpu-process. </tspan>
-<tspan x="10" y="1098">[7612:0403/154323:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
-<tspan x="10" y="1114">3 Apr 15:43:23 - [warn] ------------------------------------------------------</tspan>
-<tspan x="10" y="1130">3 Apr 15:43:23 - [warn] [rpi-gpio] Info : Ignoring Raspberry Pi specific node</tspan>
-<tspan x="10" y="1146">3 Apr 15:43:23 - [warn] ------------------------------------------------------</tspan>
-<tspan x="10" y="1162">3 Apr 15:43:23 - [info] Settings file  : /home/travis/.node-red/settings.js</tspan>
-<tspan x="10" y="1178">3 Apr 15:43:23 - [info] User directory : /home/travis/.node-red</tspan>
-<tspan x="10" y="1194">3 Apr 15:43:23 - [info] Flows file     : /home/travis/.node-red/flows_testing-gce-3225f5c9-98d1-\</tspan>
-<tspan x="10" y="1210">449a-ad35-347aeadce92e.json</tspan>
-<tspan x="10" y="1226">3 Apr 15:43:23 - [info] Creating new flow file</tspan>
-<tspan x="10" y="1242">3 Apr 15:43:23 - [info] Starting flows</tspan>
-<tspan x="10" y="1258">3 Apr 15:43:23 - [info] Started flows</tspan>
-<tspan x="10" y="1274">3 Apr 15:43:23 - [warn] Communication server error: Error: listen EADDRINUSE 0.0.0.0:41651</tspan>
-<tspan x="10" y="1290">3 Apr 15:43:23 - [error] Unable to listen on http://127.0.0.1:41651/</tspan>
-<tspan x="10" y="1306">3 Apr 15:43:23 - [error] Error: port in use</tspan>
+<tspan x="10" y="1098">[4986:0404/084552:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="1114">4 Apr 08:45:53 - [warn] ------------------------------------------------------</tspan>
+<tspan x="10" y="1130">4 Apr 08:45:53 - [warn] [rpi-gpio] Info : Ignoring Raspberry Pi specific node</tspan>
+<tspan x="10" y="1146">4 Apr 08:45:53 - [warn] ------------------------------------------------------</tspan>
+<tspan x="10" y="1162">4 Apr 08:45:53 - [info] Settings file  : /home/travis/.node-red/settings.js</tspan>
+<tspan x="10" y="1178">4 Apr 08:45:53 - [info] User directory : /home/travis/.node-red</tspan>
+<tspan x="10" y="1194">4 Apr 08:45:53 - [info] Flows file     : /home/travis/.node-red/flows_testing-gce-88b266bc-a05c-\</tspan>
+<tspan x="10" y="1210">477a-a8a7-efb5488238fe.json</tspan>
+<tspan x="10" y="1226">4 Apr 08:45:53 - [info] Creating new flow file</tspan>
+<tspan x="10" y="1242">4 Apr 08:45:53 - [info] Starting flows</tspan>
+<tspan x="10" y="1258">4 Apr 08:45:53 - [info] Started flows</tspan>
+<tspan x="10" y="1274">4 Apr 08:45:53 - [warn] Communication server error: Error: listen EADDRINUSE 0.0.0.0:62424</tspan>
+<tspan x="10" y="1290">4 Apr 08:45:53 - [error] Unable to listen on http://127.0.0.1:62424/</tspan>
+<tspan x="10" y="1306">4 Apr 08:45:53 - [error] Error: port in use</tspan>
 <tspan x="10" y="1322"></tspan>
-<tspan x="10" y="1338">browserTest - opened url http://127.0.0.1:41651?modeTest=1</tspan>
+<tspan x="10" y="1338">browserTest - opened url http://127.0.0.1:62424?modeTest=1</tspan>
 <tspan x="10" y="1354"></tspan>
-<tspan x="10" y="1370">[7612:0403/154325:INFO:CONSOLE(245)] "----------|-----------|-----------|-----------|-----------\</tspan>
+<tspan x="10" y="1370">[4986:0404/084554:INFO:CONSOLE(245)] "----------|-----------|-----------|-----------|-----------\</tspan>
 <tspan x="10" y="1386">|</tspan>
 <tspan x="10" y="1402">File      |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
 <tspan x="10" y="1418">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="1434">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="1450">All files |       100 |       100 |       100 |       100 |</tspan>
 <tspan x="10" y="1466">----------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1482">", source: file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/electron.15b347c1ea50.f92c2\</tspan>
-<tspan x="10" y="1498">c31686a9.html (245)</tspan>
-<tspan x="10" y="1514">[7612:0403/154325:INFO:CONSOLE(245)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
-<tspan x="10" y="1530">l", source: file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/electron.15b347c1ea50.f92c\</tspan>
-<tspan x="10" y="1546">2c31686a9.html (245)</tspan>
+<tspan x="10" y="1482">", source: file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/electron.15b382440350.4253e\</tspan>
+<tspan x="10" y="1498">9ffa1349.html (245)</tspan>
+<tspan x="10" y="1514">[4986:0404/084554:INFO:CONSOLE(245)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
+<tspan x="10" y="1530">l", source: file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/electron.15b382440350.4253\</tspan>
+<tspan x="10" y="1546">e9ffa1349.html (245)</tspan>
 <tspan x="10" y="1562">[node test-case 4 of 6 passed] - testCase_buildApp_default</tspan>
 <tspan x="10" y="1578"></tspan>
 <tspan x="10" y="1594">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/bu\</tspan>
@@ -117,7 +117,7 @@
 <tspan x="10" y="1834">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/bu\</tspan>
 <tspan x="10" y="1850">ild/screenCapture.npmTest.browser..html</tspan>
 <tspan x="10" y="1866"></tspan>
-<tspan x="10" y="1882">browserTest - exit-code 0 - http://127.0.0.1:41651?modeTest=1</tspan>
+<tspan x="10" y="1882">browserTest - exit-code 0 - http://127.0.0.1:62424?modeTest=1</tspan>
 <tspan x="10" y="1898"></tspan>
 <tspan x="10" y="1914"></tspan>
 <tspan x="10" y="1930">browserTest - merged coverage from /home/travis/build/npmdoc/node-npmdoc-node-red/tmp/coverage.n\</tspan>
@@ -145,8 +145,8 @@
 <tspan x="10" y="2282">-report</tspan>
 <tspan x="10" y="2298"></tspan>
 <tspan x="10" y="2314">-------------------------------------------------------</tspan>
-<tspan x="10" y="2330">| test-report - buildNpmdoc - node - linux v6.10.1 - 2017-04-03T15:42:43.115Z</tspan>
-<tspan x="10" y="2346">|   48524 ms            0 failed        6 passed      |</tspan>
+<tspan x="10" y="2330">| test-report - buildNpmdoc - node - linux v6.10.1 - 2017-04-04T08:45:34.579Z</tspan>
+<tspan x="10" y="2346">|   27389 ms            0 failed        6 passed      |</tspan>
 <tspan x="10" y="2362">-------------------------------------------------------</tspan>
 <tspan x="10" y="2378"></tspan>
 <tspan x="10" y="2394">created test-report file:///home/travis/build/npmdoc/node-npmdoc-node-red/tmp/build/test-report.\</tspan>
@@ -156,6 +156,6 @@
 <tspan x="10" y="2458">npmTest - 0 failed tests</tspan>
 <tspan x="10" y="2474"></tspan>
 <tspan x="10" y="2490"></tspan>
-<tspan x="10" y="2506">[MODE_BUILD=npmTest] - 2017-04-03T15:43:35Z - EXIT_CODE - 0</tspan>
+<tspan x="10" y="2506">[MODE_BUILD=npmTest] - 2017-04-04T08:46:04Z - EXIT_CODE - 0</tspan>
 </text>
 </svg>

@@ -236,7 +236,7 @@
 <tspan x="10" y="3738">  │ │   └── stream-shift@1.0.0 </tspan>
 <tspan x="10" y="3754">  │ └── xtend@4.0.1 </tspan>
 <tspan x="10" y="3770">  ├── mustache@2.3.0 </tspan>
-<tspan x="10" y="3786">  ├─┬ node-red-node-email@0.1.21 </tspan>
+<tspan x="10" y="3786">  ├─┬ node-red-node-email@0.1.22 </tspan>
 <tspan x="10" y="3802">  │ ├─┬ imap@0.8.19 </tspan>
 <tspan x="10" y="3818">  │ │ ├─┬ readable-stream@1.1.14 </tspan>
 <tspan x="10" y="3834">  │ │ │ └── isarray@0.0.1 </tspan>
