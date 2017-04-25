@@ -1,6 +1,6 @@
 # npmdoc-node-red
 
-#### api documentation for  [node-red (v0.16.2)](http://nodered.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-red.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-red) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-red.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-red)
+#### basic api documentation for  [node-red (v0.16.2)](http://nodered.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-red.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-red) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-red.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-red)
 
 #### A visual tool for wiring the Internet of Things
 
